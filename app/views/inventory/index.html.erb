@@ -1,0 +1,6 @@
+<h1>Inventory of Vehicles for Rent</h1>
+	<% @products.each do |product| %>
+		<div class="col-md-3 inventory"
+			<%= render partial: "product_teaser", locals: {product: product} %>
+		</div>
+	<% end %>

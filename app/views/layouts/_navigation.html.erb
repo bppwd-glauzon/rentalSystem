@@ -1,0 +1,17 @@
+<div class="row" id="header">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<ul class="nav navbar-nav">
+					<%= image_tag("chevyLogo.png", :alt => "Logo", :id => "logo") %>
+					<%= link_to "Home", "/" %> |
+					<%= link_to "Inventory", "/inventory/index" %> |
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<%= link_to "Sign In", "/admin/index" %>
+					<% if user_signed_in? %>
+						-<%= link_to "Sign Out", destroy_user_session_path, :method => "delete" %>
+					<% end %>
+				</ul>
+			</nav>
+		</div>
+	</div>
